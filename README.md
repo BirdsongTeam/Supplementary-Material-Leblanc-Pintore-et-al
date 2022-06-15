@@ -99,6 +99,7 @@ SM7: Summary of the statistical tests (.csv file)
 
 SM8: Table compiling the ark identifier of the ressource from Morphosource (.pdf file)
 
+SM9: R Code used in the analyses 
 
 
 Data derived from other sources:
