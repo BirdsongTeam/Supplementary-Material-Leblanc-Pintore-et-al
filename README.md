@@ -58,7 +58,7 @@ SM2: Repetion test made with 10 replicate on 3 species morphologically similar (
 SM3: Classification of 55 Furnariida present in this study(.pdf and .csv files)
 - SM3a: Categories used wuth the source from the litterature (available inside the SM1.csv file)
 - SM3b: Foraging time in different forst strate from Elton traits (available inside the SM1.csv file).
-- SM3c: Bibliography (avaible inside the SM3c.pdf file)
+- SM3c: Bibliography (separate in SM3c.pdf file)
 
 SM4: phylogenetic tree reconstruct from Moyle et al., 2009(available inside the SM2.pdf file)
 
@@ -99,14 +99,19 @@ SM7: Summary of the statistical tests (.csv file)
 
 SM8: Table compiling the ark identifier of the ressource from Morphosource (.pdf file)
 
-SM9: R Code used in the analyses 
+SM9: R Code used in the analyses
+- SM9a Script to load the .pts file and launch the Genralized Procruste Alignement (GPA) and plot PCA associate
+- SM9b Scrit to vizualise the shape deformation along each PC for each PCA
+- SM9c Script to launch statistical test (phylogenetic and size effect).
+- SM9d All file requiert to launch the script, including the result of the sliding, the different trees ajusted as for some bones as some specimens had either damaged or absent bones. Finally we add the .ply nessecary to vizualise shape deformation.
 
 
 Data derived from other sources:
 
 In SM1, the landmarks deifintion was based on previous definition from Hedrick et al., 2019 and Bjarnason & Benson 2021
-In SM3 , locomotion categories and perching performance are derived from data in ebird, Eltons trait and others reference list in the bibliography associate.
+In SM3 , locomotion categories and perching performance are derived from data in ebird from Wilman et al, 2014 (SM3b) and others reference list in the bibliography (SM3c).
 In SM4, the cladogram is constructed from the phylogeny of Moyle et al., 2009
+In SM9 we include some extra variale from  Claramunt et al,. 2012; Wilman et al, 2014 and Tobias & Pigot, 2019 if operator want to vizualise our datasets.
 
 
 
@@ -120,7 +125,18 @@ SM1: We construct a landmark protocol based on previous works on ungual bones (H
 
 SM3: We classify species based on the most used locomotor mode from the observation from the liteterature together with photos and videos from ebird. We create a new classification, the perching performance to evaluate the ability of birds to perform acrobatic and climbing abilities. The perching performance is a attemp to refine the hopping categories as hopping hopping and the ground and in branches are not exposed to the same physical stresss. Indeed the birds hopping in branches put their center of mass below the feet more often. 
 
-SM3:
-To investigate whether walking or hopping abilities were related to a specific morphology and influenced by a given habitat, we conducted a shape analysis on the lower appendicular skeleton of a sample of bird species. We selected 47 species of birds among the 1004 previously used in the ancestral state reconstruction, to obtain a diversity of orders and families, locomotion habits, habitat, and size (SM 3). We selected 47 species among 22 orders (55% of the total number of families) (SM 1c), available in two museum collections. One specimen of each species was chosen in the Coleção de Aves of the Departamento de Zoologia, Instituto de Biociências, of the University of São Paulo, Brazil, in the Coleção de Aves of the Museu Nacional, in Rio de Janeiro, Brazil and in the Collections ostéologiques d'oiseaux d’Anatomie Comparée of the Muséum national d'Histoire naturelle (SM 3). We verified that the chosen specimens showed no signs of abnormality, with all bones intact and fused epiphyses. The lower appendicular skeletons, including the pelvis, femur, tibiotarsus, and tarsometatarsus, were scanned. For specimens measured in Brazil, the bones were scanned at the micro-CT scan imaging facility of the Instituto de Biociências of the Universidade de São Paulo Brazil, with a SkyScan microtomographer (SkyScan 1176 BrukerMicroCT, Aatselaar, Belgium, 2003). Resolutions were adapted depending on the size of the specimen, ranging from 9 µm (50 Kv and 300 μA) for the smallest specimen to 40 µm (90 Kv and 260 μA) with multiple stacks acquisitions for the largest one. The images were reconstructed using NRecon software (SkyScan 2011, Version 1.6.6.0) and segmented using Avizo software (9.3 version). For specimens borrowed in France, the bones were scanned at the Surfaçus platform in the MNHN, with a Faro edge arm 450 nm, CDRH/IEC classe 2M, FaroBlu TM. Both acquisition campaigns provided the 3D shape of the pelvis and the long bones of one hind limb (femur, tibiotarsus, and tarsometatarsus) for each specimen.
-
 SM4: In order to construct the phylogenetic tree, we retain the species only present in our study based on the result from Moyle et al., 2009.
+
+SM5: Similar analysis made on the others phalanges.
+
+SM6: Similar shape deformation along the two first PC on the others phalanges.
+
+SM7: Summary of all statistical test and variance of each PCA for all structures.
+
+SM8: Table compiling the Ark identifiers of the morphosource references
+
+SM9: All resoource to reproduce our analysis, we include in the classification file supplementary data from others articles like the climbing index from Claramunt et al., 2012), the foraging behaviours and bodymass from Wilman et al, 2014 and Tobias & Pigot, 2019 if operator want to vizualise our datasets with others variables.
+
+
+
+
