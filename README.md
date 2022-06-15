@@ -104,7 +104,7 @@ SM9: R Code used in the analyses
 
 Data derived from other sources:
 
-In SM1, the landmarks deifintion was based on previous deifition from Hedrick et al., 2019 and Bjarnason & Benson 2021
+In SM1, the landmarks deifintion was based on previous definition from Hedrick et al., 2019 and Bjarnason & Benson 2021
 In SM3 , locomotion categories and perching performance are derived from data in ebird, Eltons trait and others reference list in the bibliography associate.
 In SM4, the cladogram is constructed from the phylogeny of Moyle et al., 2009
 
