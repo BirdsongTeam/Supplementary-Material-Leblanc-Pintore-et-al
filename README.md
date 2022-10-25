@@ -36,21 +36,21 @@ SM1: Ark identifiers for the specimens available on morphosource
 SM2: Anatomical description of the 3D landmarks of the 14 phalanges and the tarsometatarsus used in the geometric morphometrics analysis 
  
 SM3: Repetition test made with 10 replicates on 3 species morphologically similar
-- SM3a:Tarsometatarsus
-- SM3b:Phalanx I digit I
-- SM3c:Phalanx II digit I
-- SM3d:Phalanx I digit II
-- SM3e:Phalanx II digit II
-- SM3f:Phalanx III digit II
-- SM3g:Phalanx I digit III
-- SM3h:Phalanx II digit III
-- SM3i:Phalanx III digit III
-- SM3j:Phalanx IV digit III
-- SM3k:Phalanx I digit IV
-- SM3l:Phalanx II digit IV
-- SM3m:Phalanx III digit IV
-- SM3n:Phalanx IV digit IV
-- SM3o:Phalanx V digit IV
+- SM3a: Tarsometatarsus
+- SM3b: Phalanx I digit I
+- SM3c: Phalanx II digit I
+- SM3d: Phalanx I digit II
+- SM3e: Phalanx II digit II
+- SM3f: Phalanx III digit II
+- SM3g: Phalanx I digit III
+- SM3h: Phalanx II digit III
+- SM3i: Phalanx III digit III
+- SM3j: Phalanx IV digit III
+- SM3k: Phalanx I digit IV
+- SM3l: Phalanx II digit IV
+- SM3m: Phalanx III digit IV
+- SM3n: Phalanx IV digit IV
+- SM3o: Phalanx V digit IV
  
 SM4: Classifications of 55 Furnariida used in this study
 - SM4a: Locomotion and Perching abilities of each studied species, with the sources used to define them.
@@ -60,27 +60,26 @@ SM4: Classifications of 55 Furnariida used in this study
 SM5: SM5 Phylogenetic tree of the species used in the study, based on Moyle et al., 2009
  
 SM6: PCA figure of PC1 and PC2 with phylomorphospace
-- SM6a:Phalanx II digit II
-- SM6b:Phalanx III digit II 
-- SM6c:Phalanx II digit III
-- SM6d:Phalanx III digit III
-- SM6e:Phalanx IV digit III 
-- SM6f:Phalanx II digit IV
-- SM6g:Phalanx III digit IV
-- SM6h:Phalanx IV digit IV 
-- SM6i:Phalanx V digit IV 
+- SM6a: Phalanx II digit II
+- SM6b: Phalanx III digit II 
+- SM6c: Phalanx II digit III
+- SM6d: Phalanx III digit III
+- SM6e: Phalanx IV digit III 
+- SM6f: Phalanx II digit IV
+- SM6g: Phalanx III digit IV
+- SM6h: Phalanx IV digit IV 
+- SM6i: Phalanx V digit IV 
  
 SM7: Theoretical shape deformation
-- SM7a:Theoretical shape deformation of phalanx II digit II, at both extremum of the two first axes of the PCA in Hylopezus macularius (A8409) 
-- SM7b: Theoretical shape deformation of phalanx III digit II, at the negative side (top) and positive side (bottom) of PC1 (a), and PC2 (b) and (c) in Hylopezus macularius (A8409) 
-- SM7c: Theoretical shape deformation of phalanx II digit III, at the negative side (left)and positive side (right) of PC1 (a), and PC2 (b) in Hylopezus macularius (A8409)
-- SM7d: Theoretical shape deformation of phalanx III digit III, at the negative side (left) and positive side (right) of PC1 (a), and PC2 (b) in Hylopezus macularius (A8409)
-- SM7e: Theoretical shape deformation of phalanx IV digit III, at the negative side (top) and positive side (bottom) of PC1 (a), and PC2 (b) and (c) in Hylopezus macularius (A8409)
-- SM7f: Theoretical shape deformation of phalanx II digit IV, at the negative side (left) and positive side (right) of PC1 (a), and PC2 (b) in Hylopezus macularius (A8409)
-- SM7g: Theoretical shape deformation of phalanx III digit IV, at the negative side (left) and positive side (right) of PC1 (a), and PC2 (b) in Hylopezus macularius (A8409)
-- SM7h: Theoretical shape deformation of phalanx IV digit IV, at the negative side (left) and positive side (right) of PC1 (a), and PC2 (b) in Hylopezus macularius (A8409)
-- SM7i: Theoretical shape deformation of phalanx V digit IV, at the negative side (top) and positive side (bottom) of PC1 (a), and PC2 (b) in Hylopezus macularius (A8409)
- 
+- SM7a: Phalanx II digit II, at both extremum of the two first axes of the PCA in Hylopezus macularius (A8409) 
+- SM7b: Phalanx III digit II, at the negative side (top) and positive side (bottom) of PC1 (a), and PC2 (b) and (c) in Hylopezus macularius (A8409) 
+- SM7c: Phalanx II digit III, at the negative side (left)and positive side (right) of PC1 (a), and PC2 (b) in Hylopezus macularius (A8409)
+- SM7d: Phalanx III digit III, at the negative side (left) and positive side (right) of PC1 (a), and PC2 (b) in Hylopezus macularius (A8409)
+- SM7e: Phalanx IV digit III, at the negative side (top) and positive side (bottom) of PC1 (a), and PC2 (b) and (c) in Hylopezus macularius (A8409)
+- SM7f: Phalanx II digit IV, at the negative side (left) and positive side (right) of PC1 (a), and PC2 (b) in Hylopezus macularius (A8409)
+- SM7g: Phalanx III digit IV, at the negative side (left) and positive side (right) of PC1 (a), and PC2 (b) in Hylopezus macularius (A8409)
+- SM7h: Phalanx IV digit IV, at the negative side (left) and positive side (right) of PC1 (a), and PC2 (b) in Hylopezus macularius (A8409)
+- SM7i: Phalanx V digit IV, at the negative side (top) and positive side (bottom) of PC1 (a), and PC2 (b) in Hylopezus macularius (A8409)
  
 SM8: Summary of the statistical tests
 - SM7a: Size effect 
@@ -96,6 +95,7 @@ SM9: R Code used in the analyses
 - SM9b Script to visualise the shape deformation along each PC for each PCA
 - SM9c Script to launch statistical tests (phylogenetic and size effect).
 - SM9d All file requiert to launch the script, including the result of the sliding, the different trees adjusted as for some bones as some specimens had either damaged or absent bones. Finally we add the .ply necessary to visualise shape deformation.
+
 
 
 Data derived from other sources:
