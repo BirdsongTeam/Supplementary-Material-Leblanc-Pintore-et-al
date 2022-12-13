@@ -265,7 +265,7 @@ dat_d4p5 <- data.frame(GPA_D4P5$PCscores[,1],GPA_D4P5$PCscores[,2])
 #################### ggplot plot
 
 
-#############Preparing the each plot
+#############Preparing each plot
 
 plot_tmt <- ggplot(dat_tmt , aes(dat_tmt[,1], dat_tmt[,2],color=classification$`Perching performance` ,label = classification$sp2,shape=classification$Locomotion)) +
   geom_point(size=7) + geom_text_repel(color="black") + labs(title = "") + geom_encircle(aes(group=classification$`Perching performance`,fill=classification$`Perching performance`),colour="darkred", s_shape = 1, expand = 0,
