@@ -235,26 +235,33 @@ PCA_tmt <- {plot(GPA_tmt$PCscores[,1],GPA_tmt$PCscores[,2])
 
 
 
-##################gg plot###################
+##################gg plot graph###################
 
 library(ggplot2)
 library(ggalt)
 library(ggrepel)
 
+####loading variable######
+
+#tmt
 dat_tmt<- data.frame(GPA_tmt$PCscores[,1],GPA_tmt$PCscores[,2])
 
+#hallux
 dat_d1p1 <- data.frame(GPA_D1P1$PCscores[,1],GPA_D1P1$PCscores[,2])
 dat_d1p2 <- data.frame(GPA_D1P2$PCscores[,1],GPA_D1P2$PCscores[,2])
 
+#digit II
 dat_d2p1 <- data.frame(GPA_D2P1$PCscores[,1],GPA_D2P1$PCscores[,2])
 dat_d2p2 <- data.frame(GPA_D2P2$PCscores[,1],GPA_D2P2$PCscores[,2])
 dat_d2p3 <- data.frame(GPA_D2P3$PCscores[,1],GPA_D2P3$PCscores[,2])
 
+#digit III
 dat_d3p1 <- data.frame(GPA_D3P1$PCscores[,1],GPA_D3P1$PCscores[,2])
 dat_d3p2 <- data.frame(GPA_D3P2$PCscores[,1],GPA_D3P2$PCscores[,2])
 dat_d3p3 <- data.frame(GPA_D3P3$PCscores[,1],GPA_D3P3$PCscores[,2])
 dat_d3p4 <- data.frame(GPA_D3P4$PCscores[,1],GPA_D3P4$PCscores[,2])
 
+#digit IV
 dat_d4p1 <- data.frame(GPA_D4P1$PCscores[,1],GPA_D4P1$PCscores[,2])
 dat_d4p2 <- data.frame(GPA_D4P2$PCscores[,1],GPA_D4P2$PCscores[,2])
 dat_d4p3 <- data.frame(GPA_D4P3$PCscores[,1],GPA_D4P3$PCscores[,2])
@@ -262,22 +269,20 @@ dat_d4p4 <- data.frame(GPA_D4P4$PCscores[,1],GPA_D4P4$PCscores[,2])
 dat_d4p5 <- data.frame(GPA_D4P5$PCscores[,1],GPA_D4P5$PCscores[,2])
 
 
-#################### ggplot plot
+####Preparing each plot######
 
-
-#############Preparing each plot
-
+#tmt
 plot_tmt <- ggplot(dat_tmt , aes(dat_tmt[,1], dat_tmt[,2],color=classification$`Perching performance` ,label = classification$sp2,shape=classification$Locomotion)) +
   geom_point(size=7) + geom_text_repel(color="black") + labs(title = "") + geom_encircle(aes(group=classification$`Perching performance`,fill=classification$`Perching performance`),colour="darkred", s_shape = 1, expand = 0,
                                                                                          alpha = 0.20, show.legend = FALSE)+xlab("PC1")+ylab("PC2")+scale_shape_manual(values=c(8, 19,17))+scale_color_manual(values=c("#193EE2", "#009E73", "#F0E442"))+scale_fill_manual(values=c("#56B4E9", "#009E73", "#F0E442"))+ theme_classic()+ geom_hline(yintercept=0, linetype="dashed",color = "black", size=0.8,alpha=0.1) +geom_vline(xintercept = 0, linetype="dashed",color = "black", size=0.8,alpha=0.1)
-
+#hallux
 plot_d1p1 <- ggplot(dat_d1p1 , aes(dat_d1p1[,1], dat_d1p1[,2],color=classification$`Perching performance` ,label = classification$sp2,shape=classification$Locomotion)) +
   geom_point(size=7) + geom_text_repel(color="black") + labs(title = "") + geom_encircle(aes(group=classification$`Perching performance`,fill=classification$`Perching performance`),colour="darkred", s_shape = 1, expand = 0,
                                                                                          alpha = 0.20, show.legend = FALSE)+xlab("PC1")+ylab("PC2")+scale_shape_manual(values=c(8, 19,17))+scale_color_manual(values=c("#193EE2", "#009E73", "#F0E442"))+scale_fill_manual(values=c("#56B4E9", "#009E73", "#F0E442"))+ theme_classic()+ geom_hline(yintercept=0, linetype="dashed",color = "black", size=0.8,alpha=0.1) +geom_vline(xintercept = 0, linetype="dashed",color = "black", size=0.8,alpha=0.1)
 plot_d1p2 <- ggplot(dat_d1p2 , aes(dat_d1p2[,1], dat_d1p2[,2],color=classification$`Perching performance` ,label = classification$sp2,shape=classification$Locomotion)) +
   geom_point(size=7) + geom_text_repel(color="black") + labs(title = "") + geom_encircle(aes(group=classification$`Perching performance`,fill=classification$`Perching performance`),colour="darkred", s_shape = 1, expand = 0,
                                                                                          alpha = 0.20, show.legend = FALSE)+xlab("PC1")+ylab("PC2")+scale_shape_manual(values=c(8, 19,17))+scale_color_manual(values=c("#193EE2", "#009E73", "#F0E442"))+scale_fill_manual(values=c("#56B4E9", "#009E73", "#F0E442"))+ theme_classic()+ geom_hline(yintercept=0, linetype="dashed",color = "black", size=0.8,alpha=0.1) +geom_vline(xintercept = 0, linetype="dashed",color = "black", size=0.8,alpha=0.1)
-
+#digit II
 plot_d2p1 <- ggplot(dat_d2p1 , aes(dat_d2p1[,1], dat_d2p1[,2],color=classification$`Perching performance` ,label = classification$sp2,shape=classification$Locomotion)) +
   geom_point(size=7) + geom_text_repel(color="black") + labs(title = "") + geom_encircle(aes(group=classification$`Perching performance`,fill=classification$`Perching performance`),colour="darkred", s_shape = 1, expand = 0,
                                                                                          alpha = 0.20, show.legend = FALSE)+xlab("PC1")+ylab("PC2")+scale_shape_manual(values=c(8, 19,17))+scale_color_manual(values=c("#193EE2", "#009E73", "#F0E442"))+scale_fill_manual(values=c("#56B4E9", "#009E73", "#F0E442"))+ theme_classic()+ geom_hline(yintercept=0, linetype="dashed",color = "black", size=0.8,alpha=0.1) +geom_vline(xintercept = 0, linetype="dashed",color = "black", size=0.8,alpha=0.1)
@@ -287,7 +292,7 @@ plot_d2p2 <- ggplot(dat_d2p2 , aes(dat_d2p2[,1], dat_d2p2[,2],color=classificati
 plot_d2p3 <- ggplot(dat_d2p3 , aes(dat_d2p3[,1], dat_d2p3[,2],color=classification_D2P3$`Perching performance` ,label = classification_D2P3$sp2,shape=classification_D2P3$Locomotion)) +
   geom_point(size=7) + geom_text_repel(color="black") + labs(title = "") + geom_encircle(aes(group=classification_D2P3$`Perching performance`,fill=classification_D2P3$`Perching performance`),colour="darkred", s_shape = 1, expand = 0,
                                                                                          alpha = 0.20, show.legend = FALSE)+xlab("PC1")+ylab("PC2")+scale_shape_manual(values=c(8, 19,17))+scale_color_manual(values=c("#193EE2", "#009E73", "#F0E442"))+scale_fill_manual(values=c("#56B4E9", "#009E73", "#F0E442"))+ theme_classic()+ geom_hline(yintercept=0, linetype="dashed",color = "black", size=0.8,alpha=0.1) +geom_vline(xintercept = 0, linetype="dashed",color = "black", size=0.8,alpha=0.1)
-
+#digit III
 plot_d3p1 <- ggplot(dat_d3p1 , aes(dat_d3p1[,1], dat_d3p1[,2],color=classification$`Perching performance` ,label = classification$sp2,shape=classification$Locomotion)) +
   geom_point(size=7) + geom_text_repel(color="black") + labs(title = "") + geom_encircle(aes(group=classification$`Perching performance`,fill=classification$`Perching performance`),colour="darkred", s_shape = 1, expand = 0,
                                                                                          alpha = 0.20, show.legend = FALSE)+xlab("PC1")+ylab("PC2")+scale_shape_manual(values=c(8, 19,17))+scale_color_manual(values=c("#193EE2", "#009E73", "#F0E442"))+scale_fill_manual(values=c("#56B4E9", "#009E73", "#F0E442"))+ theme_classic()+ geom_hline(yintercept=0, linetype="dashed",color = "black", size=0.8,alpha=0.1) +geom_vline(xintercept = 0, linetype="dashed",color = "black", size=0.8,alpha=0.1)
@@ -300,7 +305,7 @@ plot_d3p3 <- ggplot(dat_d3p3 , aes(dat_d3p3[,1], dat_d3p3[,2],color=classificati
 plot_d3p4 <- ggplot(dat_d3p4 , aes(dat_d3p4[,1], dat_d3p4[,2],color=classification_D3P4$`Perching performance` ,label = classification_D3P4$sp2,shape=classification_D3P4$Locomotion)) +
   geom_point(size=7) + geom_text_repel(color="black") + labs(title = "") + geom_encircle(aes(group=classification_D3P4$`Perching performance`,fill=classification_D3P4$`Perching performance`),colour="darkred", s_shape = 1, expand = 0,
                                                                                          alpha = 0.20, show.legend = FALSE)+xlab("PC1")+ylab("PC2")+scale_shape_manual(values=c(8, 19,17))+scale_color_manual(values=c("#193EE2", "#009E73", "#F0E442"))+scale_fill_manual(values=c("#56B4E9", "#009E73", "#F0E442"))+ theme_classic()+ geom_hline(yintercept=0, linetype="dashed",color = "black", size=0.8,alpha=0.1) +geom_vline(xintercept = 0, linetype="dashed",color = "black", size=0.8,alpha=0.1)
-
+#digit IV
 plot_d4p1 <- ggplot(dat_d4p1 , aes(dat_d4p1[,1], dat_d4p1[,2],color=classification$`Perching performance` ,label = classification$sp2,shape=classification$Locomotion)) +
   geom_point(size=7) + geom_text_repel(color="black") + labs(title = "") + geom_encircle(aes(group=classification$`Perching performance`,fill=classification$`Perching performance`),colour="darkred", s_shape = 1, expand = 0,
                                                                                          alpha = 0.20, show.legend = FALSE)+xlab("PC1")+ylab("PC2")+scale_shape_manual(values=c(8, 19,17))+scale_color_manual(values=c("#193EE2", "#009E73", "#F0E442"))+scale_fill_manual(values=c("#56B4E9", "#009E73", "#F0E442"))+ theme_classic()+ geom_hline(yintercept=0, linetype="dashed",color = "black", size=0.8,alpha=0.1) +geom_vline(xintercept = 0, linetype="dashed",color = "black", size=0.8,alpha=0.1)
@@ -323,22 +328,22 @@ plot_d4p5 <- ggplot(dat_d4p5 , aes(dat_d4p5[,1], dat_d4p5[,2],color=classificati
 
 ##########################Plotting
 
-####tarsometatarsus
+#tarsometatarsus
 plot_tmt 
 
-####digit 1
+#hallux
 plot_d1p1
 plot_d1p2 
-####digit 2
+#digit 2
 plot_d2p1
 plot_d2p2
 plot_d2p3
-####digit 3
+#digit 3
 plot_d3p1
 plot_d3p2
 plot_d3p3
 plot_d3p4
-####digit 4
+#digit 4
 plot_d4p1
 plot_d4p2
 plot_d4p3
@@ -351,108 +356,160 @@ plot_d4p5
 
 
 
-############################Phylomorphospace
+#########Phylomorphospace
+
+
+#########Painting the Furnariidae (blue) and Dendrocolaptidae (red) branches for each tree
+
+plotTree(tres,node.numbers=TRUE)
+tres<-paintSubTree(tres,56,state="black")
+tres<-paintSubTree(tres,62,state="blue")
+tres<-paintSubTree(tres,77,state="red")
+cols<-colnames(tres$mapped.edge)
+names(cols)<-cols
+plotSimmap(tres,cols,pts=FALSE)
+
+plotTree(tres_D2P2_D3P2_D4P2_D4P5,node.numbers=TRUE)
+tres_D2P2_D3P2_D4P2_D4P5<-paintSubTree(tres_D2P2_D3P2_D4P2_D4P5,55,state="black")
+tres_D2P2_D3P2_D4P2_D4P5<-paintSubTree(tres_D2P2_D3P2_D4P2_D4P5,61,state="blue")
+tres_D2P2_D3P2_D4P2_D4P5<-paintSubTree(tres_D2P2_D3P2_D4P2_D4P5,76,state="red")
+cols<-colnames(tres_D2P2_D3P2_D4P2_D4P5$mapped.edge)
+names(cols)<-cols
+plotSimmap(tres_D2P2_D3P2_D4P2_D4P5,cols,pts=FALSE)
+
+
+plotTree(tres_D2P3,node.numbers=TRUE)
+tres_D2P3<-paintSubTree(tres_D2P3,54,state="black")
+tres_D2P3<-paintSubTree(tres_D2P3,73,state="blue")
+tres_D2P3<-paintSubTree(tres_D2P3,60,state="red")
+cols<-colnames(tres_D2P3$mapped.edge)
+names(cols)<-cols
+plotSimmap(tres_D2P3,cols,pts=FALSE)
+
+plotTree(tres_D3P3_D4P4,node.numbers=TRUE)
+tres_D3P3_D4P4<-paintSubTree(tres_D3P3_D4P4,54,state="black")
+tres_D3P3_D4P4<-paintSubTree(tres_D3P3_D4P4,73,state="blue")
+tres_D3P3_D4P4<-paintSubTree(tres_D3P3_D4P4,60,state="red")
+cols<-colnames(tres_D3P3_D4P4$mapped.edge)
+names(cols)<-cols
+plotSimmap(tres_D3P3_D4P4,cols,pts=FALSE)
+
+plotTree(tres_D3P3_D4P4,node.numbers=TRUE)
+tres_D3P3_D4P4<-paintSubTree(tres_D3P3_D4P4,54,state="black")
+tres_D3P3_D4P4<-paintSubTree(tres_D3P3_D4P4,73,state="blue")
+tres_D3P3_D4P4<-paintSubTree(tres_D3P3_D4P4,60,state="red")
+cols<-colnames(tres_D3P3_D4P4$mapped.edge)
+names(cols)<-cols
+plotSimmap(tres_D3P3_D4P4,cols,pts=FALSE)
+
+
+plotTree(tres_D3P4,node.numbers=TRUE)
+tres_D3P4<-paintSubTree(tres_D3P4,54,state="black")
+tres_D3P4<-paintSubTree(tres_D3P4,74,state="blue")
+tres_D3P4<-paintSubTree(tres_D3P4,60,state="red")
+cols<-colnames(tres_D3P4$mapped.edge)
+names(cols)<-cols
+plotSimmap(tres_D3P4,cols,pts=FALSE)
+
+##########################Plot phylomorphospace
 
 PC_phy <-GPA_tmt$PCscores[,1:2]
 row.names(PC_phy)<- label_tree$Sp
-phylomorphospace(tres,PC_phy,node.size=c(0,1.2),label="off",lwd=2,)
+phylomorphospace(tres,PC_phy,node.size=c(0,1.2),colors=cols,label="off",lwd=2,)
 abline(h=0, v=0, col="grey75", lty="dashed")
-
-
-
 PC_phy <-GPA_D1P1$PCscores[,1:2]
 row.names(PC_phy)<- label_tree$Sp
-phylomorphospace(tres,PC_phy,node.size=c(0,1.2),label="off",lwd=2,)
+phylomorphospace(tres,PC_phy,node.size=c(0,1.2),colors=cols,label="off",lwd=2,)
 abline(h=0, v=0, col="grey75", lty="dashed")
 
 
 PC_phy <-GPA_D1P2$PCscores[,1:2]
 cbind(classification$sp2,label_tree$Sp)
 row.names(PC_phy)<- label_tree$Sp
-phylomorphospace(tres,PC_phy,node.size=c(0,1.2),label="off",lwd=2,)
+phylomorphospace(tres,PC_phy,node.size=c(0,1.2),colors=cols,label="off",lwd=2,)
 abline(h=0, v=0, col="grey75", lty="dashed")
 
 
 PC_phy <-GPA_D2P1$PCscores[,1:2]
 cbind(classification$sp2,label_tree$Sp)
 row.names(PC_phy)<- label_tree$Sp
-phylomorphospace(tres,PC_phy,node.size=c(0,1.2),label="off",lwd=2,)
+phylomorphospace(tres,PC_phy,node.size=c(0,1.2),colors=cols,label="off",lwd=2,)
 abline(h=0, v=0, col="grey75", lty="dashed")
 
 
 PC_phy <-GPA_D2P2$PCscores[,1:2]
 cbind(Classification_inter_terminal$sp2,label_D2P2_D3P2_D4P2_D4P5$Sp)
 row.names(PC_phy)<- label_D2P2_D3P2_D4P2_D4P5$Sp
-phylomorphospace(tres_D2P2_D3P2_D4P2_D4P5,PC_phy,node.size=c(0,1.2),label="off",lwd=2,)
+phylomorphospace(tres_D2P2_D3P2_D4P2_D4P5,PC_phy,node.size=c(0,1.2),colors=cols,label="off",lwd=2,)
 abline(h=0, v=0, col="grey75", lty="dashed")
 
 
 PC_phy <-GPA_D2P3$PCscores[,1:2]
 cbind(classification_D2P3$sp2,label_tree_D2P3$Sp)
 row.names(PC_phy)<- label_tree_D2P3$Sp
-phylomorphospace(tres_D2P3,PC_phy,node.size=c(0,1.2),label="off",lwd=2,)
+phylomorphospace(tres_D2P3,PC_phy,node.size=c(0,1.2),colors=cols,label="off",lwd=2,)
 abline(h=0, v=0, col="grey75", lty="dashed")
 
 
 PC_phy <-GPA_D3P1$PCscores[,1:2]
 row.names(PC_phy)<- label_tree$Sp
-phylomorphospace(tres,PC_phy,node.size=c(0,1.2),label="off",lwd=2,)
+phylomorphospace(tres,colors=cols,PC_phy,node.size=c(0,1.2),colors=cols,label="off",lwd=2,)
 abline(h=0, v=0, col="grey75", lty="dashed")
 
 
 PC_phy <-GPA_D3P2$PCscores[,1:2]
 cbind(Classification_inter_terminal$sp2,label_D2P2_D3P2_D4P2_D4P5$Sp)
 row.names(PC_phy)<- label_D2P2_D3P2_D4P2_D4P5$Sp
-phylomorphospace(tres_D2P2_D3P2_D4P2_D4P5,PC_phy,node.size=c(0,1.2),label="off",lwd=2,)
+phylomorphospace(tres_D2P2_D3P2_D4P2_D4P5,PC_phy,node.size=c(0,1.2),colors=cols,label="off",lwd=2,)
 abline(h=0, v=0, col="grey75", lty="dashed")
 
 
 PC_phy <-GPA_D3P3$PCscores[,1:2]
 cbind(classification_D3D3_D4D4$sp2,label_tree_D3P3_D4P4)
 row.names(PC_phy)<- label_tree_D3P3_D4P4$Sp
-phylomorphospace(tres_D3P3_D4P4,PC_phy,node.size=c(0,1.2),label="off",lwd=2,)
+phylomorphospace(tres_D3P3_D4P4,PC_phy,node.size=c(0,1.2),colors=cols,label="off",lwd=2,)
 abline(h=0, v=0, col="grey75", lty="dashed")
 
 
 PC_phy <-GPA_D3P4$PCscores[,1:2]
 cbind(classification_D3D4$sp2,label_tree_D3P4$Sp)
 row.names(PC_phy)<- label_tree_D3P4$Sp
-phylomorphospace(tres_D3P4,PC_phy,node.size=c(0,1.2),label="off",lwd=2,)
+phylomorphospace(tres_D3P4,PC_phy,node.size=c(0,1.2),colors=cols,label="off",lwd=2,)
 abline(h=0, v=0, col="grey75", lty="dashed")
 
 
 PC_phy <-GPA_D4P1$PCscores[,1:2]
 cbind(classification$sp2,label_tree$Sp)
 row.names(PC_phy)<- label_tree$Sp
-phylomorphospace(tres,PC_phy,node.size=c(0,1.2),label="off",lwd=2,)
+phylomorphospace(tres,PC_phy,node.size=c(0,1.2),label="off",colors=cols,lwd=2,)
 abline(h=0, v=0, col="grey75", lty="dashed")
 
 
 PC_phy <-GPA_D4P2$PCscores[,1:2]
 cbind(Classification_inter_terminal$sp2,label_D2P2_D3P2_D4P2_D4P5$Sp)
 row.names(PC_phy)<- label_D2P2_D3P2_D4P2_D4P5$Sp
-phylomorphospace(tres_D2P2_D3P2_D4P2_D4P5,PC_phy,node.size=c(0,1.2),label="off",lwd=2,)
+phylomorphospace(tres_D2P2_D3P2_D4P2_D4P5,PC_phy,node.size=c(0,1.2),colors=cols,label="off",lwd=2,)
 abline(h=0, v=0, col="grey75", lty="dashed")
 
 
 PC_phy <-GPA_D4P3$PCscores[,1:2]
 cbind(classification_D4P3$sp2,label_D4P3$Sp)
 row.names(PC_phy)<- label_D4P3$Sp
-phylomorphospace(tres_D4P3,PC_phy,node.size=c(0,1.2),label="off",lwd=2,)
+phylomorphospace(tres_D4P3,PC_phy,node.size=c(0,1.2),colors=cols,label="off",lwd=2,)
 abline(h=0, v=0, col="grey75", lty="dashed")
 
 
 PC_phy <-GPA_D4P4$PCscores[,1:2]
 cbind(classification_D3P3_D4P4$sp2,label_tree_D3D3_D4D4$Sp)
 row.names(PC_phy)<- label_tree_D3P3_D4P4$Sp
-phylomorphospace(tres_D3P3_D4P4,PC_phy,node.size=c(0,1.2),label="off",lwd=2,)
+phylomorphospace(tres_D3P3_D4P4,PC_phy,node.size=c(0,1.2),colors=cols,label="off",lwd=2,)
 abline(h=0, v=0, col="grey75", lty="dashed")
 
 
 PC_phy <-GPA_D4P5$PCscores[,1:2]
 cbind(Classification_inter_terminal$sp2,label_D2P2_D3P2_D4P2_D4P5$Sp)
 row.names(PC_phy)<- label_D2P2_D3P2_D4P2_D4P5$Sp
-phylomorphospace(tres_D2P2_D3P2_D4P2_D4P5,PC_phy,node.size=c(0,1.2),label="off",lwd=2,)
+phylomorphospace(tres_D2P2_D3P2_D4P2_D4P5,PC_phy,node.size=c(0,1.2),colors=cols,label="off",lwd=2,)
 abline(h=0, v=0, col="grey75", lty="dashed")
 
  
