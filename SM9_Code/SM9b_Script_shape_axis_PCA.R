@@ -92,7 +92,7 @@ open3d()##### open a new rgl windows if you want to plot separately shape deform
 ############Minimum
 plot3d(minshape_tmt, col="cornsilk", axes=FALSE, box=FALSE, specular=1,, emission=1,add=T)
 ############Maximum
-plot3d(maxshape_tmt, col="cornsilk", axes=FALSE, box=FALSE, specular=1, emission=1 ,add=T)
+plot3d(maxshape_tmt, col="cornsilk", axes=FALSE, box=FALSE, specular=1,alpha=0.25, emission=1 ,add=T)
 #ADD LANDMARKS
 deformGrid3d(PC1maxshape_tmt,PC1minshape_tmt, col1="brown1", col2="dodgerblue4",lines = T, type="s", size=0.0005, align=T, createMesh=T, add=T) ### tu devras surement adapter le size ici
 
@@ -106,7 +106,7 @@ maxshape2_tmt<-tps3d(meshape_tmt, as.matrix(GPA_tmt$mshape), as.matrix(PC2maxsha
 ############plot th shape deformation along the PC2
 open3d()
 
-plot3d(minshape2_tmt, col="cornsilk", axes=FALSE, box=FALSE, specular=1, emission=1, add=T)
+plot3d(minshape2_tmt, col="cornsilk", axes=FALSE, box=FALSE, specular=1, emission=1,alpha=0.2, add=T)
 plot3d(maxshape2_tmt, col="cornsilk", axes=FALSE, box=FALSE, specular=1, emission=1,,add=T)
 deformGrid3d(PC2maxshape_tmt,PC2minshape_tmt, col1="brown1", col2="dodgerblue4", type="s", size=0.0005, align=T, createMesh=T, add=T) ### tu devras surement adapter le size ici
 
@@ -129,7 +129,7 @@ minshape_D1P1<-tps3d(meshape_D1P1, as.matrix(GPA_D1P1$mshape), as.matrix(PC1mins
 maxshape_D1P1<-tps3d(meshape_D1P1, as.matrix(GPA_D1P1$mshape), as.matrix(PC1maxshape_D1P1))
 
 open3d()
-plot3d(minshape_D1P1, col="cornsilk", axes=FALSE, box=FALSE, specular=1, emission=1,add=T)
+plot3d(minshape_D1P1, col="cornsilk", axes=FALSE, box=FALSE, specular=1, emission=1,alpha=0.25,add=T)
 plot3d(maxshape_D1P1, col="cornsilk", axes=FALSE, box=FALSE, specular=1, emission=1 ,add=T)
 #ADD LANDMARKS
 deformGrid3d(PC1maxshape_D1P1,PC1minshape_D1P1, col1="brown1", col2="dodgerblue4",lines = T, type="s", size=0.0005, align=T, createMesh=T, add=T) ### tu devras surement adapter le size ici
